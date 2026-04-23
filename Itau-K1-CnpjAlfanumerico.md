@@ -28,6 +28,7 @@ Nesse documento a Wise House apresenta proposta ao Itaú Unibanco para a adapta�
 - v1 01.07.2025 - Wise House - Elaboração original.
 - V2 18.07.2025 - Wise House - Ajustes na composição dos pacotes.
 - V3 23.04.2026 - Wise House - Conversao do doc para .md.
+- V4 23.04.2026 - Wise House - Alteracao da estimativa de horas
 
 ---
 
@@ -228,13 +229,14 @@ Essa proposta considera duas entregas, cujos escopos e prazos são apresentados 
 
 1. Script de conversão dos datatypes para *Varchar*
 2. Script de complementação com zero dos campos alterados para Varchar
-3. Roteiro do teste regressivo
-4. Rollback da conversão de datatypes
-5. Fontes C# alterados
-6. Scripts SQL de alteração de procedures, funções e views
-7. Rollback dos fontes C#
-8. Rollback dos scripts SQL
-9. Roteiro do teste das funções e procedures alteradas
+3. Diagrama de arquitetura com as camadas da aplicação
+4. Roteiro do teste regressivo
+5. Rollback da conversão de datatypes
+6. Fontes C# alterados
+7. Scripts SQL de alteração de procedures, funções e views
+8. Rollback dos fontes C#
+9. Rollback dos scripts SQL
+10. Roteiro do teste das funções e procedures alteradas
 
 ### Prazo de entrega
 
@@ -296,4 +298,4 @@ Essa proposta considera duas entregas, cujos escopos e prazos são apresentados 
 
 | Adaptação do K1 ao CNPJ alfanumérico | custo (horas) |
 |---|---|
-| | **2.560** |
+| | **2.600** |
