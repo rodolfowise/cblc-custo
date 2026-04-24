@@ -154,8 +154,8 @@ Criar microserviço **ms-custo-cblc** que:
 8. Rejeitar registros malformados, documentando posição e erro
 
 **Persistência:**
-9. Inserir Saldos (Tipo 2) em TBH1ESGX_SALDOS_INVESTIDOR
-10. Inserir Aquisições (Tipo 3) em TBH1ESGX_AQUISICOES
+9. Inserir Saldos (Tipo 2) em TBH1ESGX_SALDOS_INVESTIDOR  
+10. Inserir Aquisições (Tipo 3) em TBH1ESGX_AQUISICOES  
 11. Calcular custo unitário médio ponderado
 12. Garantir integridade referencial (vínculo com TBINV2, TBPAP2)
 

@@ -11,9 +11,9 @@ A Receita Federal emitiu em maio/2024 a *Nota Técnica conjunta COCAD/SUARA/RFB 
 > O novo cálculo do dígito de controle foi definido de forma a preservar os valores que atualmente são gerados para os conteúdos exclusivamente numéricos.
 
 A referida Nota Técnica definiu janeiro/2026 como início da emissão dos CNPJ's com letras, data que foi adiada para **julho/2026** pela Instrução Normativa RFB nº 2229, de 15/10/24.
-<div class="pagebreak"></div>
+
 Nesse documento a Wise House apresenta proposta ao Itaú Unibanco para a adaptação do sistema K1 ao CNPJ alfanumérico, decompondo a proposta nos seguintes compromissos e considerações:
-<div style="page-break-after: always;"></div>
+
 - referências legais
 - considerações sobre o ambiente
 - considerações sobre o cronograma
@@ -31,7 +31,7 @@ Nesse documento a Wise House apresenta proposta ao Itaú Unibanco para a adapta�
 - V4 23.04.2026 - Wise House - Alteracao da estimativa de horas
 
 ---
-
+<div class="pagebreak"></div>
 ### Eventos de levantamento
 
 - Conversação por email entre Itaú (Marega) e Wise House de 14/08/24 a 18/10/24, sob título 'Campo CNPJ alfanumérico', avaliando superficialmente o impacto do CNPJ alfanumérico no sistema K1, conforme definido pela *Nota Técnica conjunta COCAD/SUARA/RFB nº 49 de 14 de maio de 2024*.
@@ -49,7 +49,7 @@ Nesse documento a Wise House apresenta proposta ao Itaú Unibanco para a adapta�
 - Call em 30/6/25 com Itaú (Marega e Lucas) em que Marega comunicou o interesse do Itaú em fechar a contratação desse projeto.
 
 ---
-
+<div class="pagebreak"></div>
 ## REFERÊNCIAS LEGAIS
 
 - Nota Técnica conjunta COCAD/SUARA/RFB nº 49 de 14 de maio de 2024.
@@ -92,7 +92,7 @@ Nesse documento a Wise House apresenta proposta ao Itaú Unibanco para a adapta�
 - **4.1.4** Dessa forma, obtêm-se os valores para cada atributo do novo CNPJ.
 
 ---
-
+<div class="pagebreak"></div>
 ## CONSIDERAÇÕES SOBRE O AMBIENTE
 
 1. Considera-se que o desenvolvimento será realizado no ambiente da Wise House, decorrendo disso que:
@@ -108,7 +108,7 @@ Nesse documento a Wise House apresenta proposta ao Itaú Unibanco para a adapta�
    - Da mesma forma, os testes de performance realizados no ambiente da Wise House são insuficientes para confirmar o comportamento no Itaú quanto a esse quesito.
 
 ---
-
+<div class="pagebreak"></div>
 ## CONSIDERAÇÕES SOBRE O CRONOGRAMA
 
 1. A conversão do banco de dados (atividade descrita mais à frente, nos detalhes de especificação) deve ser integralmente aplicada numa única execução, independentemente de qual seja o fracionamento de entregas que se adote. Não importando no entanto se esse tombamento ocorra já na primeira entrega ou seja protelado para entregas finais, variando somente o momento em que ocorrerá o esforço de teste regressivo exigido pela conversão do banco.
@@ -122,7 +122,7 @@ Nesse documento a Wise House apresenta proposta ao Itaú Unibanco para a adapta�
 
 4. Em tempo: ressaltamos a criticidade de cumprimento dos prazos desse projeto por conta dos arquivos da CBLC (ESGM/X, EDIV/X) que já foram adaptados pela B3, e estarão em produção em maio/2026 nessa versão nova, com desativação das versões anteriores..
 ---
-
+<div class="pagebreak"></div>
 ## ESPECIFICAÇÕES FUNDAMENTAIS
 
 1. Dado que CNPJ e CPF sempre participarão como dados alfanuméricos, o K1 fará sempre o completo preenchimento de seus dígitos com zeros à esquerda, seja ao armazená-los no banco, seja nos processos e pontos de lógica SQL em que participam, seja nos relatórios e nas interfaces de saída.
@@ -166,7 +166,7 @@ Nesse documento a Wise House apresenta proposta ao Itaú Unibanco para a adapta�
 11. Em relação às letras que compõem um CNPJ alfanumérico, elas serão gravadas sempre em maiúsculas no banco de dados, mesmo que tenham sido informadas em minúsculas no ato do cadastro. Tal definição também se estende às interfaces de entrada de dados recebidas pelo K1.
 
 ---
-
+<div class="pagebreak"></div>
 ## ESCOPO – CONSIDERAÇÕES INICIAIS
 
 Essa proposta compreende a adaptação de todas as tabelas, campos, views, funções C# e stored-procedures do K1 que contêm, recebem, tratam e entregam CPF e CNPJ, para que reconheçam conteúdo alfanumérico dessas informações, e preservem integralmente sua atual funcionalidade.
@@ -191,7 +191,7 @@ Os entregáveis são arquivos separados com as seguintes finalidades:
 Essa proposta considera duas entregas, cujos escopos e prazos são apresentados nas próximas páginas.
 
 ---
-
+<div class="pagebreak"></div>
 ## ESCOPO E PRAZO DA 1ª ENTREGA
 
 ### Composição
@@ -243,7 +243,7 @@ Essa proposta considera duas entregas, cujos escopos e prazos são apresentados 
 **3 meses.**
 
 ---
-
+<div class="pagebreak"></div>
 ## ESCOPO E PRAZO DA 2ª ENTREGA
 
 ### Composição
@@ -281,7 +281,7 @@ Essa proposta considera duas entregas, cujos escopos e prazos são apresentados 
 **3 meses após a entrega do Pacote 1.**
 
 ---
-
+<div class="pagebreak"></div>
 ## CUSTO EM HORAS
 
 **Atividades consideradas:**
