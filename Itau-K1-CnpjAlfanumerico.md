@@ -11,9 +11,9 @@ A Receita Federal emitiu em maio/2024 a *Nota Técnica conjunta COCAD/SUARA/RFB 
 > O novo cálculo do dígito de controle foi definido de forma a preservar os valores que atualmente são gerados para os conteúdos exclusivamente numéricos.
 
 A referida Nota Técnica definiu janeiro/2026 como início da emissão dos CNPJ's com letras, data que foi adiada para **julho/2026** pela Instrução Normativa RFB nº 2229, de 15/10/24.
-
+<div class="pagebreak"></div>
 Nesse documento a Wise House apresenta proposta ao Itaú Unibanco para a adaptação do sistema K1 ao CNPJ alfanumérico, decompondo a proposta nos seguintes compromissos e considerações:
-
+<div style="page-break-after: always;"></div>
 - referências legais
 - considerações sobre o ambiente
 - considerações sobre o cronograma
