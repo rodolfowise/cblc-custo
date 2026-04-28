@@ -16,6 +16,6 @@ O H1 já lê e processa diariamente esses arquivos, mas aproveita somente os reg
 
 A necessidade agora surgida é a coleta e o uso da informação de custo de aquisição, das aquisições que compõem o saldo total do cotista na Subclasse.
 
-A intenção inicial é o desenvolvimento de um serviço, com abordagem arquitetônica DDD, que colete os dados do registro tipo 3 e os armazene numa tabela no banco de dados SQL do H1. O identificador do registro dessa tabela será a composição do identificador da Subclasse (campo TBPAP_CDISIN, da tabela TBH1PAP2), com o identificador do cotista (campo TBINV_CDINV da tabela TBH1INV2), e com a Data de movimento do arquivo ESGX lido.
+A intenção inicial é o desenvolvimento de um serviço, com abordagem arquitetônica DDD, com criacao de endpoints via OpenAPI expostos via Swagger, que colete os dados do registro tipo 3 e os armazene numa tabela no banco de dados SQL do H1. O identificador do registro dessa tabela será a composição do identificador da Subclasse (campo TBPAP_CDISIN, da tabela TBH1PAP2), com o identificador do cotista (campo TBINV_CDINV da tabela TBH1INV2), e com a Data de movimento do arquivo ESGX lido.
 
 A vinculação do cotista vindo no ESGX com a tabela TBH1INV2 se dá pelo CPF/CNPJ do investidor informado pelo arquivo, que corresponde ao campo TBINV_CDCPFCNPJ do arquivo TBH1INV2. E a vinculação do registro do arquivo com a tabela TBH1PAP2 se dá pelo campo ISIN do arquivo com o campo TBPAP_CDISIN da tabela TBH1PAP2.

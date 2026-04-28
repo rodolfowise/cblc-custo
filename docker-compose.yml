@@ -1,0 +1,47 @@
+version: '3.8'
+
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: mssql-cblc
+    environment:
+      SA_PASSWORD: "${SA_PASSWORD:-YourPassword123!}"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+    volumes:
+      - mssql-data:/var/opt/mssql
+    networks:
+      - cblc-network
+    healthcheck:
+      test: [CMD, /opt/mssql-tools/bin/sqlcmd, -S, localhost, -U, sa, -P, "${SA_PASSWORD:-YourPassword123!}", -Q, "SELECT 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ms-custo-cblc-api
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Production"
+      ConnectionStrings__DefaultConnection: "Server=sqlserver;Database=MsCustoCblc;User Id=sa;Password=${SA_PASSWORD:-YourPassword123!};TrustServerCertificate=true;"
+      FileSettings__EsgxDirectory: "/app/data/esgx"
+    ports:
+      - "5000:5000"
+    depends_on:
+      sqlserver:
+        condition: service_healthy
+    volumes:
+      - ./data/esgx:/app/data/esgx
+    networks:
+      - cblc-network
+
+volumes:
+  mssql-data:
+    driver: local
+
+networks:
+  cblc-network:
+    driver: bridge
